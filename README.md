@@ -26,3 +26,4 @@ EventDispatch::subscribe('myEvent', function($myData1, $myData2) {
 EventDispatch::dispatch('myEvent', array('event data', 'event data 2');
 ```
 
+Full documentation is available [here](https://github.com/walmsles/event-dispatch)
