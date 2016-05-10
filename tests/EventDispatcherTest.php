@@ -24,6 +24,18 @@ class EventDispatcherTest extends SapphireTest
         $reflection = new \ReflectionClass('EventDispatcher');
         $constructor = $reflection->getConstructor();
         $this->assertFalse($constructor->isPublic());
+
+        return $dispatch;
     }
 
+    /**
+     * @param $dispatcher
+     * @depends testEventDispatchCreate
+     */
+    public function testEventDispatchOneInstance($dispatcher)
+    {
+        $dispatch = EventDispatcher::inst();
+        $this->assertEquals($dispatcher, $dispatch);
+    }
+    
 }
