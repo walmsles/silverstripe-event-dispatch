@@ -28,6 +28,14 @@ class EventDispatcher
     {
         // do nothing
     }
+    
+    /**
+     * Forward all static calls such as EventDispatcher::subscribe()
+     */
+    public static function __callStatic($name, $arguments)
+    {
+        return call_user_func_array(array(self::inst(), $name), $arguments);
+    }
 
 
 }
