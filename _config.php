@@ -1,0 +1,4 @@
+<?php
+
+define('SILVERSTRIPE_EVENT_DISPATCH_DIR', 'silverstripe-event-dispatch');
+define('SILVERSTRIPE_EVENT_DISPATCH_PATH', BASE_PATH . '/' . SILVERSTRIPE_EVENT_DISPATCH_DIR);
