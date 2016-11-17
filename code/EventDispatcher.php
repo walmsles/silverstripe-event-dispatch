@@ -8,6 +8,8 @@ use walmsles\EventDispatch\Dispatcher;
  */
 class EventDispatcher
 {
+    
+    /** @var  Dispatcher */
     private static $instance;
 
     public static function inst()
