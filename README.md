@@ -17,13 +17,14 @@ Event Module allows registration of listeners to arbitrary events which can be f
 e.g. Closure, function name, array definining Class instance and method (`array($this, 'myMethod')`)
 
 ```
-EventDispatch::subscribe('myEvent', function($myData1, $myData2) {
+EventDispatch::inst()->subscribe('myEvent', function($myData1, $myData2) {
     // so somehting with $myData
     
     return $myData1 . ' ' . $myData2;
 });
 
-EventDispatch::dispatch('myEvent', array('event data', 'event data 2');
+/** @var array $responses */
+$responses = EventDispatch::inst()->dispatch('myEvent', array('event data', 'event data 2'));
 ```
 
 Full documentation is available [here](https://github.com/walmsles/event-dispatch)
